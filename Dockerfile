@@ -4,7 +4,7 @@ LABEL maintainer "Levent SAGIROGLU <LSagiroglu@gmail.com>"
 
 ARG VERSION=1.5.2
 ENV TELEGRAF_CONFIG_PATH /etc/telegraf.conf
-VOLUME /data
+VOLUME /shared
 WORKDIR /tmp
 RUN apk add --no-cache wget 
 RUN wget https://dl.influxdata.com/telegraf/releases/telegraf-${VERSION}-static_linux_amd64.tar.gz -O telegraf.tar.gz
